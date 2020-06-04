@@ -1,8 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, ImageBackground, View } from "react-native";
 import { withTheme } from "react-native-paper";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { DrawerActions } from "@react-navigation/native";
 
-const Home = ({ theme }) => {
+const Home = ({ theme, drawerAction, navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -13,7 +15,13 @@ const Home = ({ theme }) => {
         style={styles.image}
       >
         <View style={styles.island}>
-          <Text style={styles.title}>Aztlán</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.dispatch(DrawerActions.openDrawer());
+            }}
+          >
+            <Text style={styles.title}>Aztlán</Text>
+          </TouchableOpacity>
           <Text>
             (en náhuatl: 'aztatl', ‘"garzas", y tlan, "locativo", "lugar de las
             garzas"’) es un sitio mítico, nombrado en varias fuentes de origen
