@@ -1,0 +1,17 @@
+{
+  "name": "aztlan-uapp",
+  "displayName": "aztlan-uapp",
+  "expo": {
+    "name": "aztlan-uapp",
+    "slug": "expo-template-bare",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
